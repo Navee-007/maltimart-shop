@@ -1,0 +1,129 @@
+.hero-section{
+  background: var(--hero-bg);
+}
+
+.hero-content h2{
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 20px 0px;
+}
+
+.hero-content p{
+  color: var(--primary-color);
+  line-height: 28px;
+}
+
+.hero-section p:nth-child(1){
+  font-weight: 500;
+}
+
+.buy-btn{
+  border: none;
+  outline: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
+.buy-btn a:hover{
+  color: #fff;
+}
+
+.hero-content{
+  padding-top: 45px;
+}
+
+/* timer  */
+.timer-count{
+  background:var(--primary-color);
+  height: 300px;
+}
+
+.timer-count img{
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.store-btn{
+  background: #fff;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.store-btn a:hover{
+    color: var(--primary-color);
+} 
+
+@media only screen and (max-width:992px) {
+
+  .hero-content h2{
+    font-size: 2rem;
+  }
+
+  .section-title{
+    font-size: 1.7rem;
+  }
+
+  .counter-img{
+    display: none;
+  }
+
+  .clock-top-content{
+    text-align: center;
+  }
+
+  .clock-top-content h4{
+    font-size: .9rem;
+  }
+
+  .clock-top-content h3{
+    font-size: 1rem !important;
+  }
+
+  .store-btn{
+    text-align: center; 
+  }
+
+  .clock-wrapper{
+    justify-content: center;
+  }
+
+  .clock-main{
+    text-align: center;
+  }
+  
+}
+
+@media only screen and (max-width:768px) {
+
+  .hero-content h2{
+    font-size: 1.6rem;
+  }
+
+  .hero-content  p {
+    font-size: 0.9rem;
+  }
+  
+  .buy-btn{
+    font-size: 0.9rem;
+  }
+}
+
+
+@media only screen and (max-width:768px) {
+
+  .hero-content{
+    padding-top: 0;
+    margin-bottom: 40px;
+  }
+
+}
+
+
+

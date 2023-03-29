@@ -1,0 +1,29 @@
+.dashboard-img{
+  width:80px !important;
+  height: 80px !important;
+  object-fit: cover;
+}
+
+tr{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+td i{
+  cursor: pointer;
+}
+
+td,
+th{
+  color: var(--primary-color);
+}
+
+.all-p-btn{
+  margin: 0;
+}
+
+.table > :not(caption) > * > * {
+    border:none;
+}

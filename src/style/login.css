@@ -1,0 +1,28 @@
+ .auth-from{
+  background: var(--primary-color);
+  padding: 40px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.auth-btn{
+  background: #fff;
+  color: var(--primary-color);
+  font-weight: 600 !important;
+}
+
+.auth-from p{
+  margin-top: 30px;
+}
+
+.auth-from p a{
+  color: rgba(225, 225, 225, 0.735);
+}
+
+.auth-from input[type='file']{
+  color: #fff;
+  cursor: pointer;
+}
