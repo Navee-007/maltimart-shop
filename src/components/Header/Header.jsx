@@ -1,4 +1,4 @@
-import React, { useRef, useEffect,useState } from "react";
+import React, { useRef, useEffect } from "react";
 import "./header.css";
 import { Container, Row } from "reactstrap";
 import { NavLink, useNavigate } from 'react-router-dom'
@@ -11,8 +11,6 @@ import { Link } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import {auth} from "../../firebase.config" 
 import { toast } from "react-toastify";
-import { db } from '../firebase.config'
-import { collection, getDocs } from 'firebase/firestore'
 
 
 
@@ -49,19 +47,7 @@ const Header = () => {
     });
   };
   
-  const [data, setData] = useState([]);
-
-
-
-  useEffect(() => {
-    const getData = async () => {
-      const data = await getDocs(collection(db, "users"));
-      setData(data.docs.map(doc => ({ ...doc.data(), id: doc.id })))
-    }
-    getData()
-  }, []);
-
-
+  
 
   const logout = () =>{
     signOut(auth).then(()=>{
@@ -128,24 +114,25 @@ const Header = () => {
                 <span className="badge">{totalQuantity}</span>
               </span>
               <div className="profile  ">
+                {/* <motion.img whileTap={{ scale: 1.2 }} src={currentUser ? currentUser.photoUrl : userIcon} alt="" 
+                  onClick={toggleProfileActions} */}
+                  
+                  <motion.img whileTap={{ scale: 1.2 }} src={ userIcon} alt=""
+                  onClick={toggleProfileActions}
 
+                />
                 {
-                  data.map((item, Index) => {
-                    return (
-                      <motion.img whileTap={{ scale: 1.2 }} src={currentUser ? currentUser.item.photoUrl : userIcon} alt=""
-                        onClick={toggleProfileActions} />
-                    )
-                  })
-                }
-                
-                
-                <div className="profile-actions" ref={profileActionRef} onClick={toggleProfileActions}>
+                  
+}
+                <div className="profile-actions" ref={profileActionRef} 
+                onClick={toggleProfileActions}
+                >
                   {
                     currentUser ? <span onClick={logout}>Logout</span> :
                       <div className='profile-i'>
                         <Link to='/signup'>Signup</Link>
                         <Link to='/login'>Login</Link>
-                        {/* <Link to='/dashboard'>Dashboard</Link> */}
+                        <Link to='/dashboard'>Dashboard</Link>
                       </div>
 
                   }
