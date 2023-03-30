@@ -145,7 +145,7 @@ const Header = () => {
                       <div className='profile-i'>
                         <Link to='/signup'>Signup</Link>
                         <Link to='/login'>Login</Link>
-                        <Link to='/dashboard'>Dashboard</Link>
+                        {/* <Link to='/dashboard'>Dashboard</Link> */}
                       </div>
 
                   }
