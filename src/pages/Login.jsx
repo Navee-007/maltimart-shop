@@ -33,7 +33,7 @@ const Login = () => {
 
         setLoading(false)
         toast.success("Successfully logged in ")
-        navigate('/home')
+        navigate('/checkout')
 
         
       } catch (error) {
