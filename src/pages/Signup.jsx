@@ -30,7 +30,8 @@ const Signup = () => {
 
     const addImage = (e) => {
     e.preventDefault();
-    console.log("uploading.....");
+      console.log("uploading.....");
+      setLoading(true);
     const storageRef = ref(storage, `productImages/${Date.now() + file.name}`);
     uploadBytes(storageRef, file).then((snapshot) => {
       getDownloadURL(snapshot.ref).then((url) => {
@@ -54,6 +55,7 @@ const Signup = () => {
 
   const uploadToDb = (user,url) => {
     const dbRef = collection(db, "users");
+ 
     
       const data = {
         displayName: username,
@@ -66,8 +68,11 @@ const Signup = () => {
       console.log("Document has been added successfully");
       toast.success("Product successfully added");
       navigate("/login");
+      setLoading(false);
+      
     })
-    .catch(error => {
+      .catch(error => {
+        
       console.log(error);
       toast.error("Product not added!");
       setLoading(false);
@@ -78,7 +83,7 @@ const Signup = () => {
 
   // const signup = async (e) => {
   //   e.preventDefault()
-  //   setLoading(true)
+  //   
 
     
   //   try {
