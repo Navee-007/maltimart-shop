@@ -160,7 +160,7 @@ const Signup = () => {
                   <input type="file"
 
         onChange={(e) => setFile(e.target.files[0])}
-                  />
+                required  />
                 </FormGroup>
 
                 <button type='submit' className="buy-btn auth-btn">Create an Account</button>
