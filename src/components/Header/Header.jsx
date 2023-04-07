@@ -106,8 +106,8 @@ const Header = () => {
 
             <div className="nav-icons">
               <span className="fav-icon">
-                <i className="ri-heart-line" />
-                <span className="badge">1</span>
+                {/* <i className="ri-heart-line" />
+                <span className="badge">1</span> */}
               </span>
               <span className="cart-icon" onClick={NavigateToCart}>
                 <i className="ri-shopping-bag-line" />
@@ -132,7 +132,7 @@ const Header = () => {
                       <div className='profile-i'>
                         <Link to='/signup'>Signup</Link>
                         <Link to='/login'>Login</Link>
-                        <Link to='/dashboard'>Dashboard</Link>
+                        {/* <Link to='/dashboard'>Dashboard</Link> */}
                       </div>
 
                   }
