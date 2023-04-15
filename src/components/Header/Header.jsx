@@ -128,10 +128,17 @@ const Header = () => {
                 onClick={toggleProfileActions}
                 >
                   {
-                    currentUser ? <span onClick={logout}>Logout</span> :
+                    currentUser ? 
+                    
+                    <div className='profile-i'>
+                    <Link to='/profile'>Profile</Link>
+                    <Link to='/profile' onClick={logout}>Logout</Link>
+                      </div>
+                     :
                       <div className='profile-i'>
                         <Link to='/signup'>Signup</Link>
                         <Link to='/login'>Login</Link>
+                        
                         {/* <Link to='/dashboard'>Dashboard</Link> */}
                       </div>
 
